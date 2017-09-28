@@ -19,7 +19,7 @@ sub get_hooks {
 
                 my $logger = sub {
                     my %log;
-                    $log{PRIORITY} = ;
+                    $log{PRIORITY} = $args{level};
                     if (ref $_[1] eq 'HASH') {
                         $log{$_} = $_[1]{$_} for keys %{$_[1]};
                     } else {
